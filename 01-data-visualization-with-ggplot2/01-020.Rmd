@@ -1,0 +1,61 @@
+---
+title: "01-020"
+author: "Alex Cookson"
+date: "15/05/2020"
+output: html_document
+---
+
+### Question 1
+
+What geom would you use to draw a line chart? A boxplot? A histogram? An area chart?
+
+
+### Question 2
+
+Run this code in your head and predict what the output will look like. Then, run the code in R and check your predictions:
+
+```{r q2, eval = FALSE}
+ggplot(
+  data = mpg,
+  mapping = aes(x = displ, y = hwy, colour = drv)
+) +
+  geom_point() +
+  geom_smooth(se = FALSE)
+```
+
+
+### Question 3
+
+What does `show.legend = FALSE` do? What happens if you remove it? Why do you think I used it earlier in the chapter?
+
+
+### Question 4
+
+What does the `se` argument to `geom_smooth()` do?
+
+
+### Question 5
+
+Will these two graphs look different? Why/why not?
+
+```{r q5, eval = FALSE}
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
+  geom_point() +
+  geom_smooth()
+
+ggplot() +
+  geom_point(
+    data = mpg,
+    mapping = aes(x = displ, y = hwy)
+  ) +
+  geom_smooth(
+    data = mpg,
+    mapping = aes(x = displ, y = hwy)
+  )
+```
+
+
+### Question 6
+
+Recreate the R code necessary to generate the following graphs. (Consult page 21 for graphs.)
+

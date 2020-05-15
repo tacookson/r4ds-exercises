@@ -1,0 +1,33 @@
+---
+title: "01-033"
+author: "Alex Cookson"
+date: "15/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Turn a stacked bar chart into a pie chart using `coord_polar()`.
+
+
+### Question 2
+
+What does `labs()` do? Read the documentation.
+
+
+### Question 3
+
+What's the difference between `coord_quickmap()` and `coord_map()`?
+
+
+### Question 4
+
+What does the following plot tell you about the relationship between city and highway mpg? Why is `coord_fixed()` important? What does `geom_abline()` do?
+
+```{r q4, eval = FALSE}
+ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) +
+  geom_point() +
+  geom_abline() +
+  coord_fixed()
+```
+

@@ -1,0 +1,61 @@
+---
+title: "01-015"
+author: "Alex Cookson"
+date: "15/05/2020"
+output: html_document
+---
+
+### Question 1
+
+What happens if you facet on a continuous variable?
+
+
+### Question 2
+
+What do the empty cells in a plot with `facet_grid(drv ~ cyl)` mean? How do they relate to this plot?
+
+```{r q2, eval = FALSE}
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = drv, y = cyl))
+```
+
+
+### Question 3
+
+What plots does the following code make? What does `.` do?
+
+```{r q3}
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(drv ~ .)
+
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(. ~ cyl)
+```
+
+
+### Question 4
+
+Take the first faceted plot in this section:
+
+```{r q4, eval = FALSE}
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_wrap(~ class, nrow = 2)
+```
+
+What are the advantages to using faceting instead of the colour aesthetic? What are the disadvantages? How might the balance change if you had a larger dataset?
+
+
+### Question 5
+
+Read `?facet_wrap`. What does `nrow` do? What does `ncol` do? What other options control the layout of the individual panels? Why doesn't `facet_grid()` have `nrow` and `ncol` variables?
+
+
+### Question 6
+
+When using `facet_grid()` you should usually put the variable with more unique levels in the columns. Why?
+
+
+

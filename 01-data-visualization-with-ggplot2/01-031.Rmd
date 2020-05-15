@@ -1,0 +1,31 @@
+---
+title: "01-031"
+author: "Alex Cookson"
+date: "15/05/2020"
+output: html_document
+---
+
+### Question 1
+
+What is the problem with this plot? How could you improve it?
+
+```{r q1, eval = FALSE}
+ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) +
+  geom_point()
+```
+
+
+### Question 2
+
+What parameters to `geom_jitter()` control the amount of jittering?
+
+
+### Question 3
+
+Compare and contrast `geom_jitter()` with `geom_count()`.
+
+
+### Question 4
+
+What's the default position adjustment for `geom_boxplot()`? Create a visualization of the `mpg` dataset that demonstrates it.
+
