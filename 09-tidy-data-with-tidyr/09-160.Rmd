@@ -1,0 +1,28 @@
+---
+title: "09-160"
+author: "Alex Cookson"
+date: "16/05/2020"
+output: html_document
+---
+
+### Question 1
+
+What do the `extra` and `fill` arguments do in `separate()`? Experiment with the various options for the following two toy datasets:
+
+```{r q1, eval = FALSE}
+tibble(x = c("a,b,c", "d,e,f,g", "h,i,j")) %>%
+  separate(x, c("one", "two", "three"))
+
+tibble(x = c("a,b,c", "d,e", "f,g,i")) %>%
+  separate(x, c("one", "two", "three"))
+```
+
+
+### Question 2
+
+Both `unite()` and `separate()` have a `remove` argument. What does it do? Why would you set it to `FALSE`?
+
+
+### Question 3
+
+Compare and contrast `separate()` and `extract()`. Why are there three variations of separation (by position, by separator, and with groups), but only one unite?

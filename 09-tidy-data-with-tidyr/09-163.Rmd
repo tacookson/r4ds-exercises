@@ -1,0 +1,15 @@
+---
+title: "09-163"
+author: "Alex Cookson"
+date: "16/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Compare and contrast the `fill` arguments to `spread()` and `complete()`.
+
+
+### Question 2
+
+What does the direction argument to `fill()` do?
