@@ -1,0 +1,15 @@
+---
+title: "04-079"
+author: "Alex Cookson"
+date: "15/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Got to the RStudio Tips twitter accounts at *@rstudiotips (https://twitter.com/rstudiotips)* and find one tip that looks interesting. Practice using it!
+
+
+### Question 2
+
+What other common mistakes will RStudio diagnostics report? Read *http://bit.ly/RStudiocodediag* to find out.

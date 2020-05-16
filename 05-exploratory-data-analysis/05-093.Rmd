@@ -1,0 +1,15 @@
+---
+title: "05-093"
+author: "Alex Cookson"
+date: "15/05/2020"
+output: html_document
+---
+
+### Question 1
+
+What happens to missing values in a histogram? What happens to missing values in a bar chart? Why is there a difference?
+
+
+### Question 2
+
+What does `na.rm = TRUE` do in `mean()` and `sum()`?

@@ -1,0 +1,20 @@
+---
+title: "05-101"
+author: "Alex Cookson"
+date: "15/05/2020"
+output: html_document
+---
+
+### Question 1
+
+How would you rescale the `count` dataset to more clearly show the distribution of cut within color, or color within cut?
+
+
+### Question 2
+
+Use `geom_tile()` together with **dplyr** to explore how average flight delays vary by destination and month of year. What makes the plot difficult to read? How could you improve it?
+
+
+### Question 3
+
+Why is it slightly better to use `aes(x = color, y cut)` rather than `aes(x = cut, y = color)` in the previous example?

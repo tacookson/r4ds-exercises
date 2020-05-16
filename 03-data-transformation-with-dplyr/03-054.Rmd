@@ -1,0 +1,37 @@
+---
+title: "03-054"
+author: "Alex Cookson"
+date: "15/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Brainstorm as many ways as possible to select `dep_time`, `dep_delay`, `arr_time`, and `arr_delay` from `flights`.
+
+
+### Question 2
+
+What happens if you include the name of a variable multiple times in a `select()` call?
+
+
+### Question 3
+
+What does the `one_of()` function do? Why might it be helpful in conjunction with this vector?
+
+```{r q3, eval = FALSE}
+vars <- c(
+  "year", "month", "day", "dep_delay", "arr_delay"
+)
+```
+
+
+### Question 4
+
+Does the result of running the following code surprise you? How do the select helpers deal with case by default? How can you change that default?
+
+```{r q4, eval = FALSE}
+select(flights, contains("TIME"))
+```
+
+
