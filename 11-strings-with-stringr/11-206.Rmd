@@ -1,0 +1,34 @@
+---
+title: "11-206"
+author: "Alex Cookson"
+date: "17/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Describe the equivalents of `?`, `+`, and `*` in `{m,n}` form.
+
+
+### Question 2
+
+Describe in words what these regular expressions match (read carefully to see if I'm using a regular expression or a string that defines a regular expression.)
+
+a. `^.*$`
+b. `"\\{.+\\}"`
+c. `\d{4}-\d{2}-\d{2}`
+d. `"\\\\{4}"`
+
+
+### Question 3
+
+Create a regular expression to find all words that:
+
+a. Start with three consonants.
+b. Have three or more vowels in a row.
+c. Have two or more vowel-consonant pairs in a row.
+
+
+### Question 4
+
+Solve the beginner regexp crosswords at *https://regexcrossword.com/challenges/beginner*.

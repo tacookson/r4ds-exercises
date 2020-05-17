@@ -1,0 +1,25 @@
+---
+title: "15-285"
+author: "Alex Cookson"
+date: "17/05/2020"
+output: html_document
+---
+
+### Question 1
+
+What does `commas(letters, collapse = "-")` do? Why?
+
+
+### Question 2
+
+It'd be nice if you could supply multiple characters to the `pad` argument, e.g., `rule("Title", pad = "-+")`. Why doesn't this currently work? How could you fix it?
+
+
+### Question 3
+
+What does the `trim` argument to `mean()` do? When might you use it?
+
+
+### Question 4
+
+The default value for the `method` argument to `cor()` is `c("pearson", "kendall", "spearman")`. What does that mean? What value is used by default?

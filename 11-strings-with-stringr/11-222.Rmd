@@ -1,0 +1,19 @@
+---
+title: "11-222"
+author: "Alex Cookson"
+date: "17/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Find the **stringi** functions that:
+
+a. Count the number of words.
+b. Find duplicated strings.
+c. Generate random text.
+
+
+### Question 2
+
+How do you control the language that `stri_sort()` uses for sorting?

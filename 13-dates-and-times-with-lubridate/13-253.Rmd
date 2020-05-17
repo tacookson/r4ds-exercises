@@ -1,0 +1,30 @@
+---
+title: "13-253"
+author: "Alex Cookson"
+date: "17/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Why is there `months()` but no `dmonths()`?
+
+
+### Question 2
+
+Explain `days(overnight * 1)` to someone who has just started learning R. How does it work?
+
+
+### Question 3
+
+Create a vector of dates giving the first day of every month in 2015. Create a vector of dates giving the first day of every month in the *current* year.
+
+
+### Question 4
+
+Write a function that, given your birthday (as a date), returns how old you are in years.
+
+
+### Question 5
+
+Why can't `(today() %--% (today() + year(1)) / months(1)` work?

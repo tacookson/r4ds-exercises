@@ -1,0 +1,53 @@
+---
+title: "15-273"
+author: "Alex Cookson"
+date: "17/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Why is `TRUE` not a parameter to `rescale01()`? What would happen in `x` contained a single missing value, and `na.rm` was `FALSE`?
+
+
+### Question 2
+
+In the second variant of `rescale01()`, infinite values are left unchanged. Rewrite `rescale01()` so that `-Inf` is mapped to 0 and `Inf` is mapped to 1.
+
+
+### Question 3
+
+Practice turning the following code snippets into functions. Think about what each function does. What would you call it? How many arguments does it need? Can you rewrite it to be more expressive or less duplicative?
+
+```{r q3, eval = FALSE}
+mean(is.na(x))
+
+x / sum(x, na.rm = TRUE)
+
+sd(x, na.rm = TRUE) / mean(x, na.rm = TRUE)
+```
+
+
+### Question 4
+
+Follow *http://nicercode.github.io/intro/writing-functions.html* to write your own functions to compute the variance and skew of a numeric vector.
+
+
+### Question 5
+
+Write `both_na()`, a function that takes two vectors of the same length and returns the number of positions that have an `NA` in both vectors.
+
+
+### Question 6
+
+What do the following functions do? Why are they useful even though they are so short?
+
+```{r q6, eval = FALSE}
+is_directory <- function(x) file.info(x)$isdir
+is_readable <- function(x) file.access(x, 4) == 0
+```
+
+
+### Question 7
+
+Read the complete lyrics (*http://bit.ly/littlebunnyfoofoo*) to "Little Bunny Foo Foo". There's a lot of duplication in this song. Extend the initial piping example to re-create the complete song, and use functions to reduce the duplication.

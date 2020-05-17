@@ -1,0 +1,20 @@
+---
+title: "12-232"
+author: "Alex Cookson"
+date: "17/05/2020"
+output: html_document
+---
+
+### Question 1
+
+There are some suspiciously high numbers in `tvhours`. Is the mean a good summary?
+
+
+### Question 2
+
+For each factor in `gss_cat` identify whether the order of the levels is arbitrary or principled.
+
+
+### Question 3
+
+Why did moving "Not applicable" to the front of the levels move it to the bottom of the plot?

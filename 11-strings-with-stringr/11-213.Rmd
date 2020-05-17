@@ -1,0 +1,19 @@
+---
+title: "11-213"
+author: "Alex Cookson"
+date: "17/05/2020"
+output: html_document
+---
+
+### Question 1
+
+In the previous example, you might have noticed that the regular expression matched "flickered," which is not a colour. Modify the regex to fix the problem.
+
+
+### Question 2
+
+From the Harvard sentences data, extract:
+
+a. The first words from each sentence.
+b. All words ending in `ing`.
+c. All plurals.

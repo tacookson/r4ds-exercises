@@ -1,0 +1,15 @@
+---
+title: "11-211"
+author: "Alex Cookson"
+date: "17/05/2020"
+output: html_document
+---
+
+### Question 1
+
+For each of the following challenges, try solving it by using both a single regular expression and a combination of multiple `str_detect()` calls:
+
+a. Find all words that start or end with `x`.
+b. Find all words that start with a vowel and end with a consonant.
+c. Are there any words that contain at least one of each different vowel?
+d. What word has the highest proportion of vowels? (Hint: what is the denominator?)

@@ -1,0 +1,15 @@
+---
+title: "11-221"
+author: "Alex Cookson"
+date: "17/05/2020"
+output: html_document
+---
+
+### Question 1
+
+How would you find all string containing `\` with `regex()` versus with `fixed()`?
+
+
+### Question 2
+
+What are the five most common words in `sentences`?

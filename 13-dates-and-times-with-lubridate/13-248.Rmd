@@ -1,0 +1,40 @@
+---
+title: "13-248"
+author: "Alex Cookson"
+date: "17/05/2020"
+output: html_document
+---
+
+### Question 1
+
+How does the distribution of flight times within a day change over the course of the year?
+
+
+### Question 2
+
+Compare `dep_time`, `sched_dep_time`, and `dep_delay`. Are they consistent? Explain your findings.
+
+
+### Question 3
+
+Compare `air_time` with the duration between the departure and arrival. Explain your findings. (Hint: consider the location of the airport.)
+
+
+### Question 4
+
+How does the average delay time change over the course of a day? Should you use `dep_time` or `sched_dep_time`? Why?
+
+
+### Question 5
+
+On what day of the week should you leave if you want to minimize the chance of a delay?
+
+
+### Question 6
+
+What makes the distribution of `diamonds$carat` and `flights$sched_dep_time` similar?
+
+
+### Question 7
+
+Confirm my hypothesis that the early departures of flights in minutes 20-30 and 50-60 are caused by scheduled flights that leave early. (Hint: create a binary variable that tells you whether or not a flight was delayed.)

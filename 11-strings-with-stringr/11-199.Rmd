@@ -1,0 +1,35 @@
+---
+title: "11-199"
+author: "Alex Cookson"
+date: "16/05/2020"
+output: html_document
+---
+
+### Question 1
+
+In code that doesn't use **stringr**, you'll often see `paste()` and `paste0()`. What's the difference between the two functions? What **stringr** function are they equivalent to? How do the functions differ in their handling of `NA`?
+
+
+### Question 2
+
+In your own words, describe the difference beween the `sep` and `collapse` arguments to `str_c()`.
+
+
+### Question 3
+
+Use `str_length()` and `str_sub()` to extract the middle character from a string. What will you do if the string has an even number of characters?
+
+
+### Question 4
+
+What does `str_wrap()` do? When might you want to use it?
+
+
+### Question 5
+
+What does `str_trim()` do? What's the opposite of `str_trim()`?
+
+
+### Question 6
+
+Write a function that turns (e.g.) a vector `c("a", "b", "c")` into the string `a`, `b`, and `c`. Think carefully about what it should do if given a vector of length 0, 1, or 2.

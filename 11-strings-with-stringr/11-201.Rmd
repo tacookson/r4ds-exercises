@@ -1,0 +1,20 @@
+---
+title: "11-201"
+author: "Alex Cookson"
+date: "16/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Explain whyeach of these strings don't match a `\`: "\", "\\", "\\\".
+
+
+### Question 2
+
+How would you match the sequence `"'\`?
+
+
+### Question 3
+
+What patterns will the regular expressions `\..\..\..` match? How would you represent it as a string?

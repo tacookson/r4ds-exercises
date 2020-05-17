@@ -1,0 +1,35 @@
+---
+title: "11-204"
+author: "Alex Cookson"
+date: "17/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Create regular expressions to find all words that:
+
+a. Start with a vowel
+b. Only contain consonants. (Hint: think about matching "not"-vowels.)
+c. End with `ed`, but not with `eed`.
+d. End with `ing` or `ize`.
+
+
+### Question 2
+
+Empirically verify the rule "i before e except after c."
+
+
+### Question 3
+
+Is "q" always followed by a "u"?
+
+
+### Question 4
+
+Write a regular expression that matches a word if it's probably written in British English, not American English.
+
+
+### Question 5
+
+Create a regular expression that will match telephone numbers as commonly written in your country.

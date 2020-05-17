@@ -1,0 +1,45 @@
+---
+title: "10-186"
+author: "Alex Cookson"
+date: "16/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Compute the average delay by destination, then join on the `airports` data frame so you can show the spatial distribution of delays. Here's an easy way to draw a map of the United States:
+
+```{r q1, eval = FALSE}
+airports %>%
+  semi_john(flights, c("faa" = "dest")) %>%
+  ggplot(aes(lon, lat)) +
+  borders("state") +
+  geom_point() +
+  coord_quickmap()
+```
+
+(Don't worry if you don't understand what `semi_join()` does -- you'll learn about it next.)
+
+You might want to use the `size` or `colour` of the points to display the average delay for each airport.
+
+
+### Question 2
+
+Add the location of the origin *and* destination (i.e., the `lat` and `lon`) to `flights`.
+
+
+### Question 3
+
+Is there a relationship between the age of a plane and its delays?
+
+
+### Question 4
+
+What weather conditions make it more likely to see a delay?
+
+
+### Question 5
+
+What happened on June 13, 2013? Display the spatial pattern of delays, and then use Google to cross-reference with the weather.
+
+

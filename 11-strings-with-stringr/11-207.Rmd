@@ -1,0 +1,25 @@
+---
+title: "11-207"
+author: "Alex Cookson"
+date: "17/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Describe, in words, what these expressions will match:
+
+a. `(.)\1\1`
+b. `"(.)(.)\\2\\1"`
+c. `(..)\1`
+d. `"(.).\\1.\\1"`
+e. `"(.)(.)(.).*\\3\\2\\1"`
+
+
+### Question 2
+
+Construct regular expressions to match words that:
+
+a. Start and end with the same character.
+b. Contain a repeated pair of letters (e.g., "church" contains "ch" repeated twice).
+c. Contain one ltter repeated in at least three places (e.g., "eleven" contains three "e"s).

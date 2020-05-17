@@ -1,0 +1,15 @@
+---
+title: "11-215"
+author: "Alex Cookson"
+date: "17/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Find all words that come after a "number" like "one", "two", "three", etc. Pull out both the number and the word.
+
+
+### Question 2
+
+Find all contractions. Separate out the pieces before and after the apostrophe.

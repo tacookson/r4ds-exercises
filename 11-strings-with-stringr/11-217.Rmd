@@ -1,0 +1,20 @@
+---
+title: "11-217"
+author: "Alex Cookson"
+date: "17/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Split up a string like `"apples, pears, and bananas"` into individual components.
+
+
+### Question 2
+
+Why is it better to split up by `boundary("word")` than `" "`?
+
+
+### Question 3
+
+What does splitting with an empty string (`""`) do? Experiment, and then read the documentation?

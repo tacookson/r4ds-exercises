@@ -1,0 +1,20 @@
+---
+title: "11-216"
+author: "Alex Cookson"
+date: "17/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Replace all forward slashes in a string with backslashes.
+
+
+### Question 2
+
+Implement a simple version of `str_to_lower()` using `replace_all()`.
+
+
+### Question 3
+
+Switch the first and last letters in `words`. Which of those strings are still words?

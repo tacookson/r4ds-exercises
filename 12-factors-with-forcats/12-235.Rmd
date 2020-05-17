@@ -1,0 +1,15 @@
+---
+title: "12-235"
+author: "Alex Cookson"
+date: "17/05/2020"
+output: html_document
+---
+
+### Question 1
+
+How have the proportions of people identifying as Democrat, Republican, and Independent changed over time?
+
+
+### Question 2
+
+How could you collapse `rincome` into a small set of categories?

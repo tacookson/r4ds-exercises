@@ -1,0 +1,38 @@
+---
+title: "15-276"
+author: "Alex Cookson"
+date: "17/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Read the source code for each of the following three functions, puzzle out what they do, and then brainstorm better names:
+
+```{r q1, eval = FALSE}
+f1 <- function(string, prefix) {
+  substr(string, 1, nchar(prefix)) == prefix
+}
+f2 <- function(x) {
+  if (length(x) <= 1) return(NULL)
+  x[-length(x)]
+}
+f3 <- function(x, y) {
+  rep(y, length.out = length(x))
+}
+```
+
+
+### Question 2
+
+Take a function that you've written recently and spend five minutes brainstorming a better name for it and its arguments.
+
+
+### Question 3
+
+Compare and contrast `rnorm()` and `MASS::mvrnorm()`. How could you make them more consistent?
+
+
+### Question 4
+
+Make a case for why `norm_r()`, `norm_d()`, etc., would be better than `rnorm()`, `dnorm()`. Make a case for the opposite.

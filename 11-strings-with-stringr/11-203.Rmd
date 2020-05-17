@@ -1,0 +1,22 @@
+---
+title: "11-203"
+author: "Alex Cookson"
+date: "17/05/2020"
+output: html_document
+---
+
+### Question 1
+
+How would you match the literal string `"$^$"`?
+
+
+### Question 2
+
+Given the corpus of common words in `stringr::words`, create regular expressions that find all words that:
+
+a. Start with "y".
+b. End with "x".
+c. Are exactly three letters long. (Don't cheat by using `str_length()`!)
+d. Have seven letters or more.
+
+Since this list is long, you might want to use the `match` argument to `str_view()` to show only the matching or non-matching words.
