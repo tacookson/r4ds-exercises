@@ -1,0 +1,38 @@
+---
+title: "20-415"
+author: "Alex Cookson"
+date: "18/05/2020"
+output: html_document
+---
+
+### Question 1
+
+List all the functions that you can think of that take an atomic vector and return a list.
+
+
+### Question 2
+
+Brainstorm useful summary functions that, like `quantile()`, return multiple values.
+
+
+### Question 3
+
+What's missing in the following data frame? How does `quantile()` return the missing piece? Why isn't that helpful here?
+
+```{r q3, eval = FALSE}
+mtcars %>%
+  group_by(cyl) %>%
+  summarise(q = list(quantile(mpg))) %>%
+  unnest()
+```
+
+
+### Question 4
+
+What does this code do? Why might it be useful?
+
+```{r}
+mtcars %>%
+  group_by(cyl) %>%
+  summarise_each(funs(list))
+```

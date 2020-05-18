@@ -1,0 +1,50 @@
+---
+title: "19-395"
+author: "Alex Cookson"
+date: "18/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Use your Google sleuthing skills to brainstorm why there were fewer than expected flights on January 20, May 26, and September 1. (Hint: they all have the same explanation.) How would these days generalize to another year?
+
+
+### Question 2
+
+What do the three days with high positive residuals represent? How would these days generalize to another year?
+
+```{r q2. eval = FALSE}
+daily %>%
+  top_n(3, resid)
+```
+
+
+### Question 3
+
+Create a new variable that splits the `wday` variable into terms, but only for Saturdays, i.e., it should have `Thurs`, `Fri`, but `Sat-summer`, `Sat-spring`, `Sat-fall`. How does this model compare with the model with every combination of `wday` and `term`?
+
+
+### Question 4
+
+Create a new `wday` variable that combines the day of week, term (for Saturdays), and public holidays. What do the residuals of the model look like?
+
+
+### Question 5
+
+What happens if you fit a day-of-week effect that varies by month (i.e., `n ~ wday * month`)? Why is this not very helpful?
+
+
+### Question 6
+
+What would you expect the model `n ~ wday + ns(date, 5)` to look like? Knowing what you know about the data, why would you expect it to be not particularly effective?
+
+
+### Question 7
+
+We hypothesized that people leaving on Sundays are more likely to be business travellers who need to be somewhere on Monday. Explore that hypothesis by seeing how it breaks down based on distance and time: if it's true, you'd expect to see more Sunday evening flights to places that are far away.
+
+
+### Question 8
+
+It's a little frustrating that Saturday and Sunday are on separate end of the plot. Write a small function to set the levels of the factor so that the week start on a Monday.

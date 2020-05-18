@@ -1,0 +1,25 @@
+---
+title: "19-384"
+author: "Alex Cookson"
+date: "18/05/2020"
+output: html_document
+---
+
+### Question 1
+
+In the plot of `lcarat` versus `lprice`, there are some bright vertical strips. What do they represent?
+
+
+### Question 2
+
+If `log(price) = a_0 + a_1 * log(carat)`, what does that say about the relationship between `price` and `carat`?
+
+
+### Question 3
+
+Extract the diamonds that have very high and very low residuals. Is there anything unusual about these diamonds? Are they particularly bad or good, or do you think these are pricing errors?
+
+
+### Question 4
+
+Does the final model, `mod_diamonds2`, do a good job of predicting diamond prices? Would you trust it to tell you how much to spend if you were buying a diamond?

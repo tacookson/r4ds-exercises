@@ -1,0 +1,15 @@
+---
+title: "20-419"
+author: "Alex Cookson"
+date: "18/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Why might the `lengths()` function be useful for creating atomic vector columns from list-columns?
+
+
+### Question 2
+
+List the most common types of vector found in a data frame. What makes lists different?

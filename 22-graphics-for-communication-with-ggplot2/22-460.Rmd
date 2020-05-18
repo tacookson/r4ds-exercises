@@ -1,0 +1,42 @@
+---
+title: "22-460"
+author: "Alex Cookson"
+date: "18/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Why doesn't the following code override the default scale?
+
+```{r q1, eval = FALSE}
+ggplot(df, aes(x, y)) +
+  geom_hex() +
+  scale_colour_gradient(low = "white", high = "red") +
+  coord_fixed()
+```
+
+### Question 2
+
+What is the first argument to every scale? How does it compare to `labs()`?
+
+
+### Question 3
+
+Change the display of the presidential terms by:
+
+a. Combining the two variants shown above.
+b. Improving the display of the y-axis.
+c. Labelling each term with the name of the president.
+d. Adding informative plot labels.
+e. Placing breaks every four years (this is trickier than it seems!)
+
+
+### Question 4
+
+Use `override.aes` to make the legend on the following plot easier to see:
+
+```{r q4, eval = FALSE}
+ggplot(diamonds, aes(carat, price)) +
+  geom_point(aes(colour = cut), alpha = 1/20)
+```

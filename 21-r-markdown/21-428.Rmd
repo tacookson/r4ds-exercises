@@ -1,0 +1,24 @@
+---
+title: "21-428"
+author: "Alex Cookson"
+date: "18/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Practice what you've learned by creating a brief CV. The title should be your name, and you should include headings for (at least) education or employment. Each of the sections should include a bulleted list of jobs/degrees. Highlight the year in bold.
+
+
+### Question 2
+
+Using the R Markdown quick reference, figure out how to:
+
+a. Add a footnote.
+b. Add a horizontal rule.
+c. Add a block quote.
+
+
+### Question 3
+
+Copy and paste the contents of *diamond-sizes.Rmd* from *https://github.com/hadley/r4ds/tree/master/rmarkdown* into a local R Markdown document. Check that you can run it, then add text after the frequency polygon that describes its most striking features.

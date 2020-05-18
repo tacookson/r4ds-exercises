@@ -1,0 +1,20 @@
+---
+title: "16-312"
+author: "Alex Cookson"
+date: "18/05/2020"
+output: html_document
+---
+
+### Question 1
+
+What does `hms:hms(3600)` return? How does it print? What primitive type is the augmented vector built on top of? What attributes does it use?
+
+
+### Question 2
+
+Try and make a tibble that has columns with different lengths. What happens?
+
+
+### Question 3
+
+Based off the previous definition, is it OK to have a list as a column of a tibble?

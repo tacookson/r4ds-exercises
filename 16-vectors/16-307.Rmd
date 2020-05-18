@@ -1,0 +1,18 @@
+---
+title: "16-307"
+author: "Alex Cookson"
+date: "18/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Draw the following lists as nested sets:
+
+a. `list(a, b, list(c, d), list(e, f))`
+b. `list(list(list(list(list(list(a))))))`
+
+
+### Question 2
+
+What happens if you subset a tibble as if you're subsetting a list? What are the key differences between a list and a tibble?

@@ -1,0 +1,40 @@
+---
+title: "16-302"
+author: "Alex Cookson"
+date: "18/05/2020"
+output: html_document
+---
+
+### Question 1
+
+What does `mean(is.na(x))` tell you about a vector `x`? What about `sum(!is.finite(x))`?
+
+
+### Question 2
+
+Carefully read the documentation of `is.vector()`. What does it actually test for? Why does `is.atomic()` not agree with the definition of atomic vectors above?
+
+
+### Question 3
+
+Compare and contrast `setNames()` with `purrr::set_names()`.
+
+
+### Question 4
+
+Create functions that take a vector as input and return:
+
+a. The last value. Should you use `[` or `[[`?
+b. The elemnts at even numbered positions.
+c. Every element except the last value.
+d. Only even numbers (and no missing values).
+
+
+### Question 5
+
+Why is `x[-which(x > 0)]` not the same as `x[x <= 0]`?
+
+
+### Question 6
+
+What happens when you subset with a positive integer that's bigger than the length of the vector? What happens when you subset with a name that doesn't exist?

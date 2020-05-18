@@ -1,0 +1,30 @@
+---
+title: "16-296"
+author: "Alex Cookson"
+date: "18/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Describe the difference between `is.finite(x)` and `!is.finite(x)`.
+
+
+### Question 2
+
+Read the source code for `dplyr::near()` (Hint: to see the source code, drop the `()`). How does it work?
+
+
+### Question 3
+
+A logical vector can take three possible values. How many possible values can an integer vector take? How many possible values can a double take? Use Google to do some research.
+
+
+### Question 4
+
+Brainstorm at least four functions that allow you to convert a double to an integer. How do they differ? Be precise.
+
+
+### Question 5
+
+What functions from the **readr** package allow you to turn a string into a logical, integer, and double vector?

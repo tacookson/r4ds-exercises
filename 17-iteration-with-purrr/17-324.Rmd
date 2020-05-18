@@ -1,0 +1,15 @@
+---
+title: "17-324"
+author: "Alex Cookson"
+date: "18/05/2020"
+output: html_document
+---
+
+### Question 1
+
+Read the documentation for `apply()`. In the second case, what two for loops does it generalize?
+
+
+### Question 2
+
+Adapt `col_summary()` so that it only applies to numeric columns. You might want to start with an `is_numeric()` function that returns a logical vector that has a `TRUE` corresponding to each numeric column.
