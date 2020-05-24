@@ -5,26 +5,96 @@ date: "15/05/2020"
 output: html_document
 ---
 
+```{r setup}
+library(tidyverse)
+```
+
+
 ### Question 1
 
 Run `ggplot(data = mpg)`. What do you see?
+
+-----------------------------
+
+```{r q1-answer}
+ggplot(data = mpg)
+```
+
+A blank gray plot. We don't see anything because we haven't set the `aes()` or `geom()` layers, which tell us *what* to graph and *how* to graph the data we've specified.
+
 
 
 ### Question 2
 
 How many rows are in `mtcars`? How many columns?
 
+-----------------------------
+
+The `glimpse()` function gives an overview of the data, including the number of rows and columns:
+
+```{r q2-answer-1}
+glimpse(mtcars)
+```
+
+`mtcars` has 32 rows and 11 columns.
+
+If we were interested *only* in the number of rows and columns, we can use `dim()` (dimensions), which gives an vector with of number of rows and columns (rows is the first number).
+
+```{r q2-answer-2}
+dim(mtcars)
+```
+
+
 
 ### Question 3
 
 What does the `drv` variable describe? Read the help for `?mpg` to find out.
+
+-----------------------------
+
+```{r q3-answer}
+?mpg
+```
+
+According the the documentation, `drv` is "the type of drive train, where f = front-wheel drive, r = rear wheel drive, 4 = 4wd"
+
 
 
 ### Question 4
 
 Make a scatterplot of `hwy` versus `cyl`.
 
+-----------------------------
+
+```{r q4-answer}
+ggplot(
+  # Specify the data
+  data = mpg,
+  # Specify what we are graphing (hwy on x-axis, cyl on y-axis)
+  mapping = aes(x = hwy, y = cyl)
+) +
+  # Specify how we want to graph it, a.k.a. the geometry (geom_point = scatterplot)
+  geom_point()
+```
+
+
 
 ### Question 5
 
 What happens if you make a scatterplot of `class` versus `drv`? Why is the plot not useful?
+
+-----------------------------
+
+```{r q5-answer}
+ggplot(
+  data = mpg,
+  mapping = aes(x = class, y = drv)
+) +
+  geom_point()
+```
+
+This isn't useful because there is no natural order to `class` or `drv`. Normally in a scatterplot, as we go farther right on the x-axis or up on the y-axis, a the *value* of what we're graphing increases. For example, in Question 4, `hwy` mileage increased as we went farther to the right.
+
+With `class` and `drv`, we are dealing with **categorical** variables. `class` doesn't increase, it just changes. The same is true of `drv`. Rear-wheel drive isn't "more" or "less" than front-wheel drive; it's just different.
+
+Scatterplots are suited to showuing the relationship between two variables as their values increase or decrease, but if you're dealing with variables that have no meaningful way of increasing or decreasing, a scatterplot becomes not useful.
