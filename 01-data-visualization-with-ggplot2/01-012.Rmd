@@ -16,15 +16,94 @@ ggplot(data = mpg) +
   )
 ```
 
+-----------------------------
+
+First, we should deduce what we are trying to do with this code: create a scatterplot of `displ` vs. `hwy`, with points manually set to "blue".
+
+The points are blue, though, because `colour = "blue"` is *inside* the `aes()` call. Being inside `aes()` sets the colour aesthetic to a *character* value of "blue", which applies to all data. **ggplot** doesn't interpret this as setting a colour, so it uses the default red colour.
+
+The correct code would set `colour = "blue"` *outside* the `aes()`, which we need to do when manually specifying an aesthetic:
+
+```{r q1-answer}
+ggplot(data = mpg) +
+  geom_point(
+    mapping = aes(x = displ, y = hwy),
+    colour = "blue"
+  )
+```
+
+
 
 ### Question 2
 
 Which variables in `mpg` are categorical? Which variables are continuous? (Hint: type `?mpg` to read the documentation for the dataset.) How can you see this information when you run `mpg`?
 
+-----------------------------
+
+Reading the documentation by running `?mpg` gives us enough information to determine which variables are categorical and continuous:
+
+```{r q2-answer-1}
+?mpg
+```
+
+- `manufacturer`: categorical
+- `model`: categorical
+- `displ`: continuous
+- `year`: continuous
+- `cyl`: continuous
+- `trans`: categorical
+- `drv`: categorical
+- `cty`: continuous
+- `hwy`: continuous
+- `fl`: categorical
+- `class`: categorical
+
+We could also run `mpg` and look at the class of the variable -- character, double, integer, etc. Between the class of the variable and the first 10 observations displayed, you should be able to figure out which variables are categorical or continuous
+
+```{r q2-answer-2}
+mpg
+```
+
+
 
 ### Question 3
 
 Map a continuous variable to `colour`, `size`, and `shape`. How do these aesthetics behave differently for categorical versus continuous variables?
+
+-----------------------------
+
+Let's create a scatterplot of `hwy` vs. `cty` mileage, with `cyl`, numbers of cylinders, mapped to the aesthetics in the question.
+
+```{r q3-answer-1}
+# colour
+ggplot(data = mpg) +
+  geom_point(
+    mapping = aes(x = hwy, y = cty, colour = cyl)
+  )
+```
+
+When mapped to `colour`, `cyl` values are on a gradient, with high values as light blue and low values as dark blue.
+
+```{r q3-answer-2}
+# size
+ggplot(data = mpg) +
+  geom_point(
+    mapping = aes(x = hwy, y = cty, size = cyl)
+  )
+```
+
+When mapped to `size`, high `cyl` values have large points and low `cyl` values have small points.
+
+```{r q3-answer-3}
+# shape
+ggplot(data = mpg) +
+  geom_point(
+    mapping = aes(x = hwy, y = cty, shape = cyl)
+  )
+```
+
+When mapped to `shape`, we get an error message and nothing is graphed. Shapes don't have a natural ordering to them in the same way `colour` and `size` do, so **ggplot** doesn't know what to do with it.
+
 
 
 ### Question 4
