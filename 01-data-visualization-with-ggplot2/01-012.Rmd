@@ -139,10 +139,26 @@ In one of the examples, we see the following comment:
 
 > For shapes that have a border (like 21), you can colour the inside and outside separately. Use the stroke aesthetic to modify the width of the border
 
-So `stroke` changes the width of the border, but only for shapes that have a border (like shape 21 -- a blue circle with a black border). Let's look at two examples with different `stroke` values to illustrate what `stroke` does.
+So `stroke` changes the width of the border of a shape's border. Let's look at two examples with different `stroke` values to illustrate what `stroke` does:
 
 ```{r q5-answer-2}
+# stroke = 1
+ggplot(data = mpg) +
+  geom_point(
+    mapping = aes(x = hwy, y = cty),
+    shape = 21,
+    stroke = 1
+  )
+```
 
+```{r q5-answer-3}
+# stroke = 5
+ggplot(data = mpg) +
+  geom_point(
+    mapping = aes(x = hwy, y = cty),
+    shape = 21,
+    stroke = 5
+  )
 ```
 
 
@@ -151,3 +167,11 @@ So `stroke` changes the width of the border, but only for shapes that have a bor
 
 What happens if you map an aesthetic to something other than a variable name, like `aes(colour = displ < 5)`?
 
+**ggplot** will evaluate expressions that aren't variable names. In the case of `aes(colour = displ < 5)`, **ggplot** will treat it as a logical test and return `TRUE` or `FALSE` then graph those results. We end up with points coloured based on whether they have `displ < 5` (`TRUE`) or NOT `displ < 5` (`FALSE`):
+
+```{r q6-answer}
+ggplot(data = mpg) +
+  geom_point(
+    mapping = aes(x = hwy, y = cty, colour = displ < 5)
+  )
+```
