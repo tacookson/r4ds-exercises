@@ -110,10 +110,41 @@ When mapped to `shape`, we get an error message and nothing is graphed. Shapes d
 
 What happens if you map the same variable to multiple aesthetics?
 
+-----------------------------
+
+Let's find out. We'll use the previous question as inspiration and plot `hwy` vs. `cty`, but this time we will map `cyl` to the `colour` *and* `size` aesthetics.
+
+```{r q4-answer}
+ggplot(data = mpg) +
+  geom_point(
+    mapping = aes(x = hwy, y = cty, colour = cyl, size = cyl)
+  )
+```
+
+`cyl` has taken on elements of each aesthetic: cars with many cylinders have large (`size` aesthetic), light blue (`colour` aesthetic) points, while cars with few cylinders have small, dark blue points
+
+
 
 ### Question 5
 
 What does the `stroke` aesthetic do? What shapes does it work with? (Hint: use `?geom_point`.)
+
+-----------------------------
+
+```{r q5-answer-1}
+?geom_point
+```
+
+In one of the examples, we see the following comment:
+
+> For shapes that have a border (like 21), you can colour the inside and outside separately. Use the stroke aesthetic to modify the width of the border
+
+So `stroke` changes the width of the border, but only for shapes that have a border (like shape 21 -- a blue circle with a black border). Let's look at two examples with different `stroke` values to illustrate what `stroke` does.
+
+```{r q5-answer-2}
+
+```
+
 
 
 ### Question 6
