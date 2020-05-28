@@ -47,14 +47,21 @@ ggplot(data = mpg) +
   facet_grid(drv ~ cyl)
 ```
 
-We have a facetted graph for each combination of `drv` (4, f, r) and `cyl` (4, 5, 6, 8) that has observations in at least of those. The points in the scatterplot represent the relationship between `hwy` and `cty` mileage for that combination of `drv` and `cyl` values.
+We have a facetted graph for each combination of `drv` (4, f, r) and `cyl` (4, 5, 6, 8) that has at least one observation. The points in the scatterplot represent the relationship between `hwy` and `cty` mileage for that combination of `drv` and `cyl` values.
 
-If there are no points, we can assume that there are no data points for that combination of `drv` and `cyl`. For example, there are no **5**-cylinder cars with **4**-wheel or **r**ear-wheel drive.
+If there are no points on the scatterplot, we can assume that there are no data points for that combination of `drv` and `cyl`. For example, there are no **5**-cylinder cars with **4**-wheel or **r**ear-wheel drive.
+
+How does this relate to the plot given in the question?
 
 ```{r q2-answer-2}
 ggplot(data = mpg) +
   geom_point(mapping = aes(x = drv, y = cyl))
 ```
+
+This plot shows the relationship between `drv` and `cyl`. Specifically, it shows which combinations of `drv` and `cyl` we have observations for. This is almost exactly what facetting does, except that instead of just showing a point (as in this plot), facetting shows us a whole scatterplot (as in the facetted plot above).
+
+One difference is that this plot has not converted `cyl` to a categorical variable -- it remains continuous. We can see that there is an axis tick for 7 cylinders, but no points associated with it, which means there are no 7-cylinder cars. In the facetted graph, because we had no 7-cylinder cars, **ggplot** didn't include 7 at all.
+
 
 
 ### Question 3
