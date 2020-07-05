@@ -1,9 +1,15 @@
 ---
 title: "01-012"
 author: "Alex Cookson"
-date: "15/05/2020"
-output: html_document
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
 ---
+
+```{r setup}
+library(tidyverse)
+```
+
 
 ### Question 1
 
@@ -96,10 +102,10 @@ When mapped to `size`, high `cyl` values have large points and low `cyl` values 
 
 ```{r q3-answer-3}
 # shape
-ggplot(data = mpg) +
-  geom_point(
-    mapping = aes(x = hwy, y = cty, shape = cyl)
-  )
+# ggplot(data = mpg) +
+#   geom_point(
+#     mapping = aes(x = hwy, y = cty, shape = cyl)
+#   )
 ```
 
 When mapped to `shape`, we get an error message and nothing is graphed. Shapes don't have a natural ordering to them in the same way `colour` and `size` do, so **ggplot** doesn't know what to do with it.

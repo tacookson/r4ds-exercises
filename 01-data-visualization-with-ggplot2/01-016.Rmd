@@ -1,8 +1,9 @@
 ---
 title: "01-015"
 author: "Alex Cookson"
-date: "15/05/2020"
-output: html_document
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
 ---
 
 ```{r setup}
