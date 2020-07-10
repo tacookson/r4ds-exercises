@@ -6,7 +6,7 @@ output:
   pdf_document: default
 ---
 
-```{r setup}
+```{r setup, message = FALSE}
 library(tidyverse)
 ```
 

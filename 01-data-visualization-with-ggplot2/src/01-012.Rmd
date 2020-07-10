@@ -6,7 +6,7 @@ output:
   pdf_document: default
 ---
 
-```{r setup}
+```{r setup, message = FALSE}
 library(tidyverse)
 ```
 
@@ -100,12 +100,12 @@ ggplot(data = mpg) +
 
 When mapped to `size`, high `cyl` values have large points and low `cyl` values have small points.
 
-```{r q3-answer-3}
+```{r q3-answer-3, eval = FALSE}
 # shape
-# ggplot(data = mpg) +
-#   geom_point(
-#     mapping = aes(x = hwy, y = cty, shape = cyl)
-#   )
+ggplot(data = mpg) +
+  geom_point(
+    mapping = aes(x = hwy, y = cty, shape = cyl)
+  )
 ```
 
 When mapped to `shape`, we get an error message and nothing is graphed. Shapes don't have a natural ordering to them in the same way `colour` and `size` do, so **ggplot** doesn't know what to do with it.

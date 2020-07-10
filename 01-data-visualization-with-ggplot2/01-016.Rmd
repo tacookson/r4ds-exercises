@@ -1,12 +1,12 @@
 ---
-title: "01-015"
+title: "01-016"
 author: "Alex Cookson"
 date: "`r Sys.Date()`"
 output:
   pdf_document: default
 ---
 
-```{r setup}
+```{r setup, message = FALSE}
 library(tidyverse)
 ```
 
@@ -79,10 +79,17 @@ ggplot(data = mpg) +
   facet_grid(. ~ cyl)
 ```
 
+-----------------------------
+
+This code creates facetted plots of `drv` and `cyl` -- individual plots for each unique value of each of those dimensions. `facet_grid()` creates a matrix of plots, using the tilde character `~` to define what should be plotted on rows and columns (`rows ~ columns`).
+
+However, if you just want to plot just *one* dimension on a row and leave the columns "free" (or vice versa), you use a period `.`. You can think of `.` as meaning "free". The first chunk of code, which uses `facet_grid(drv ~ .)`, would translate to "have separate **rows** for `drv` and leave the **columns** free".
+
+
 
 ### Question 4
 
-Take the first faceted plot in this section:
+Take the first facetted plot in this section:
 
 ```{r q4, eval = FALSE}
 ggplot(data = mpg) +
@@ -90,7 +97,23 @@ ggplot(data = mpg) +
   facet_wrap(~ class, nrow = 2)
 ```
 
-What are the advantages to using faceting instead of the colour aesthetic? What are the disadvantages? How might the balance change if you had a larger dataset?
+What are the advantages to using facetting instead of the colour aesthetic? What are the disadvantages? How might the balance change if you had a larger dataset?
+
+-----------------------------
+
+Advantages:
+
+- Clearly see trends *within* each facet
+- Mitigate the risk of overplotting
+
+
+Disadvantages:
+
+- Harder to see relationship *between* facets (especially as the number of facets increases)
+- Practically, facetted graphs are smaller and therefore more difficult to see
+
+
+Larger datasets could make facetting more sensible or less sensible, depending on what kind of data it contains and what you want to accomplish by graphing it.
 
 
 ### Question 5
